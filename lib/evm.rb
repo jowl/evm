@@ -3,6 +3,7 @@ require 'fileutils'
 module Evm
   ROOT_PATH = File.expand_path('..', File.dirname(__FILE__))
   LOCAL_PATH = File.join('/', 'usr', 'local', 'evm')
+  BIN_PATH = File.join(ROOT_PATH, 'bin', 'emacs')
 
   def self.abort(*args)
     STDERR.puts args.join(' ')
@@ -22,6 +23,7 @@ COMMANDS:
  bin [name]                 Show path to Emacs binary for package name
  list                       List all available packages
  use <name>                 Select name as current package
+ help                       Display this help message
 
 OPTIONS:
  --force                    Force install even when already installed
